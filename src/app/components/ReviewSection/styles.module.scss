@@ -1,0 +1,297 @@
+.reviewsSection {
+  color: #fff;
+  padding: 40px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 80px;
+  @media screen and (max-width: 768px) {
+    padding-inline: 20px;
+  }
+
+  .reviewsContainer {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+
+    // Retângulo maior
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 180px; // Ajuste de altura do retângulo
+      border-radius: 7.35px;
+      background: linear-gradient(
+        180deg,
+        #a88038 -42.59%,
+        rgba(199, 162, 101, 0) -42.59%,
+        #f3d8a2 -42.58%,
+        rgba(168, 128, 56, 0.18) 4.35%,
+        rgba(199, 162, 101, 0.05) 99.99%,
+        rgba(243, 216, 162, 0) 100%
+      );
+      border: 1.069px solid rgba(168, 128, 56, 0.6); // Transparência na borda
+      z-index: -1; // Para ficar atrás dos textos
+    }
+
+    .title {
+      color: #fff;
+
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.376px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.18px;
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      @media screen and (max-width: 768px) {
+        width: 90%;
+      }
+    }
+
+    .reviewsGrid {
+      display: flex;
+
+      gap: 20px;
+      padding-inline: 40px;
+      @media screen and (max-width: 768px) {
+        padding-inline: 0;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-10px);
+      }
+
+      .reviewCard {
+        border-radius: 6.912px;
+        border: 0.762px solid rgba(168, 128, 56, 0.25);
+        background: linear-gradient(
+          180deg,
+          #c7a265 -42.59%,
+          rgba(199, 162, 101, 0) -42.59%,
+          #a88038 -42.58%,
+          rgba(243, 216, 162, 0.18) 4.35%,
+          rgba(168, 128, 56, 0.05) 99.99%,
+          rgba(168, 128, 56, 0) 100%
+        );
+        backdrop-filter: blur(5.7174482345581055px);
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+        p {
+          color: #fff;
+
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          text-align: left;
+          margin-bottom: 10px;
+        }
+
+        .reviewAuthor {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          span {
+            color: #f3d8a2;
+
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 9.124px; /* 114.054% */
+            letter-spacing: -0.16px;
+          }
+        }
+      }
+    }
+  }
+
+  .innovationSection {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 50px;
+    padding-block: 50px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .innovationTitle {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      h2 {
+        color: #fff;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.376px;
+      }
+      p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.24px;
+        max-width: 400px;
+      }
+    }
+
+    .iconGrid {
+      display: grid; /* Alterado de flex para grid */
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+      gap: 20px; /* Espaçamento entre os itens */
+      justify-items: center; /* Centraliza os itens dentro das colunas */
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr; /* Em telas menores, uma coluna */
+      }
+
+      .iconItem {
+        text-align: center;
+
+        span {
+          display: block;
+          margin-top: 10px;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .exploreSection {
+    background-image: url("/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: 768px) {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/background.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center right;
+    }
+    .exploreTitle {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        color: #fff;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.4px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .contactButton {
+        background: #c7a265;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #f4f9fe;
+        font-size: 18px;
+
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 230px;
+        transition: background 0.3s ease;
+        img {
+          width: 15px;
+        }
+
+        &:hover {
+          background: #e0b980;
+        }
+      }
+    }
+
+    .exploreText {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+
+      max-width: 400px;
+    }
+
+    .exploreActions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      .emailInput {
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #c7a265;
+        background: #1d1d1d;
+        color: #fff;
+        flex: 1;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .reviewsContainer .reviewsGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .innovationSection .iconGrid {
+      flex-direction: column;
+    }
+
+    .exploreSection .exploreActions {
+      flex-direction: column;
+
+      .emailInput {
+        width: 100%;
+      }
+
+      .contactButton {
+        width: 100%;
+      }
+    }
+  }
+}

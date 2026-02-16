@@ -1,0 +1,54 @@
+.container {
+  background: transparent;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-block: 20px;
+  padding-inline: 80px;
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+    padding-inline: 20px;
+    gap: 20px;
+  }
+
+  img {
+    width: 120px;
+  }
+  h4 {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(99deg, #a88038 0.07%, #f3d8a2 106.32%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  button {
+    border-radius: 4px;
+    background: linear-gradient(
+      100deg,
+      #c7a265 -21.45%,
+      #a88038 100%,
+      #f3d8a2 100%
+    );
+    color: #fff;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-block: 10px;
+    padding-inline: 15px;
+    border: none;
+    cursor: pointer;
+  }
+}
